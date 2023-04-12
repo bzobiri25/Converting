@@ -13,14 +13,14 @@
       <ComboBox fx:id="unitTypeMenu" layoutX="25.0" layoutY="169.0" onAction="#onUnitTypeChange" onKeyPressed="#onUnitTypeChange" prefHeight="30.0" prefWidth="450.0" AnchorPane.topAnchor="169.0" />
       <ComboBox fx:id="leftUnitMenu" layoutX="25.0" layoutY="306.0" onAction="#onLeftUnitMenuChange" onKeyReleased="#onLeftUnitMenuChange" prefHeight="30.0" prefWidth="200.0" AnchorPane.bottomAnchor="164.0" />
       <ComboBox fx:id="rightUnitMenu" layoutX="275.0" layoutY="306.0" onAction="#onRightUnitMenuChange" onKeyReleased="#onRightUnitMenuChange" prefHeight="30.0" prefWidth="200.0" AnchorPane.bottomAnchor="164.0" />
-      <TextArea fx:id="leftTextField" layoutX="26.0" layoutY="211.0" onKeyReleased="#onLeftTextFieldChange" onKeyTyped="#onLeftTextFieldChange" prefHeight="50.0" prefWidth="200.0" promptText="Right number here ...">
+      <TextArea fx:id="leftTextField" layoutX="26.0" layoutY="211.0" onKeyReleased="#onLeftTextFieldChange" onKeyTyped="#onLeftTextFieldChange" prefHeight="50.0" prefWidth="200.0" promptText="Write number here ...">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
       </TextArea>
-      <TextArea fx:id="rightTextField" layoutX="276.0" layoutY="211.0" onKeyReleased="#onRightTextFieldChange" onKeyTyped="#onRightTextFieldChange" prefHeight="50.0" prefWidth="200.0" promptText="Right number here ...">
+      <TextArea fx:id="rightTextField" layoutX="276.0" layoutY="211.0" onKeyReleased="#onRightTextFieldChange" onKeyTyped="#onRightTextFieldChange" prefHeight="50.0" prefWidth="200.0" promptText="Write number here ...">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
       </TextArea>
       <Label layoutX="243.0" layoutY="222.0" text="=">
@@ -28,7 +28,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="98.0" layoutY="-26.0" prefHeight="121.0" prefWidth="305.0" text="LET'S CONVERT!!!!" textFill="#4828ad">
+      <Label layoutX="59.0" layoutY="-26.0" prefHeight="182.0" prefWidth="398.0" text="1,2,3... LET'S CONVERT!" textFill="#4828ad">
          <font>
             <Font size="36.0" />
          </font>
@@ -53,6 +53,16 @@
       <ImageView fitHeight="113.0" fitWidth="93.0" layoutX="93.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../Downloads/substraction-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/frequency-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="182.0" fitWidth="136.0" layoutX="192.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/cone-removebg-preview.png" />
          </image>
       </ImageView>
    </children>

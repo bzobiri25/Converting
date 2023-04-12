@@ -4,18 +4,18 @@ import java.math.BigDecimal;
 
 import application.converters.BaseUnitConverter;
 
-public class GallonConverter extends BaseUnitConverter 
+public class ImperialPintConverter extends BaseUnitConverter 
 {
-	public GallonConverter()
+	public ImperialPintConverter()
 	{
-		this.MULTIPLIER = new BigDecimal(3.785);
+		this.MULTIPLIER = new BigDecimal(0.568261);
 	}
 	
 	
 	@Override
 	public String getName() 
 	{
-		return "US Gallon";
+		return "Imperial Pint";
 	}
 	
 }

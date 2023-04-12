@@ -4,18 +4,18 @@ import java.math.BigDecimal;
 
 import application.converters.BaseUnitConverter;
 
-public class GallonConverter extends BaseUnitConverter 
+public class USLegalCupConverter extends BaseUnitConverter 
 {
-	public GallonConverter()
+	public USLegalCupConverter()
 	{
-		this.MULTIPLIER = new BigDecimal(3.785);
+		this.MULTIPLIER = new BigDecimal(0.24);
 	}
 	
 	
 	@Override
 	public String getName() 
 	{
-		return "US Gallon";
+		return "US legal cup";
 	}
 	
 }

@@ -1,3 +1,8 @@
+/*
+ * Auteur: Bilal Z. 
+ * Description: Cette classe va extend le BaseUnitConverter. Elle indique le taux de conversion par rapport a l'unité de base et le string return du pied.
+ */
+
 package application.converters.length;
 
 import java.math.BigDecimal;

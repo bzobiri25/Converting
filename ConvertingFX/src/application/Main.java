@@ -1,3 +1,8 @@
+/*
+ * Auteur: Bilal Z. 
+ * Description: Le main ici indique comment on va "set up" notre sceneBuilder, comme la taille, etc. 
+ */
+
 package application;
 	
 import javafx.application.Application;
@@ -13,7 +18,7 @@ public class Main extends Application {
 		try {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
 			Scene scene = new Scene(root); // Spécifie la taille du conteneur de tout le contenu du graphe scénique. La valeur par défaut est 400 400. Mais "400, 400" définit automatiquement la hauteur et la largeur de l'application. Cependant, en le rendant root, le SceneBuilder s'en occupe maintenant et nous pouvons le modifier si nous le voulons. 
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm()); // ajouter les définitions de style qui contrôlent l'apparence des éléments de l'interface utilisateur.
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

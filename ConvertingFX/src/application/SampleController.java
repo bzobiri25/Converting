@@ -1,3 +1,8 @@
+/*
+ * Auteur: Bilal Z. 
+ * Description: Cela est le controller de l'application. C'est ou on détient tous les méthodes pour les actions que chaque élément sur sceneBuilder va effectuer. 
+ */
+
 package application;
 
 import java.math.BigDecimal;
@@ -80,8 +85,8 @@ public class SampleController implements Initializable  // Nous voulons initiali
 		leftUnitMenu.getItems().addAll(baseUnitConverters); // This adds the whole list of units for the specific unit type on the left ComboBox.
 		rightUnitMenu.getItems().addAll(baseUnitConverters); // This adds the whole list of units for the specific unit type on the right ComboBox.
 		
-		leftUnitMenu.getSelectionModel().select(0);
-		rightUnitMenu.getSelectionModel().select(1);
+		leftUnitMenu.getSelectionModel().select(0); // Pour le premier ComboBox au gauche, on prend le premier index dans le liste de standardbaseunits. 
+		rightUnitMenu.getSelectionModel().select(1); // Pour le deuxieme ComboBox a la droite, on prend le deuxieme index dans le liste de standardbaseunits. 
 		
 		StringConverter<BaseUnitConverter> baseUnitStringConverter = new StringConverter<BaseUnitConverter>() // We want to convert this baseUnitConverter to a string. The reason we want to do it is because whenever we select on one of the baseUnitConverters, we want a very quick and easy way to tell which Unit type it is. This is similar to the method specified above this time only it is the type BaseUnit and not Unit type. This is because at first we were talking about the main combo box with all the unit types, now we are talking about the secondary ComboBoxes with all the base unit types that are in function of the main Unit Type. 
 		
@@ -107,11 +112,12 @@ public class SampleController implements Initializable  // Nous voulons initiali
 	
 	public void onUnitTypeChange(ActionEvent e) // Accepte un ActionEvent. Un événement représentant un certain type d'action. Ce type d'événement est largement utilisé pour représenter une variété de choses, comme quand un Button a été déclenché, quand un KeyFrame s'est terminé, et d'autres utilisations similaires.
 	{
-		ObservableList<BaseUnitConverter> newBaseConverters = 
+		//Donc quand on choisi un unit type, on prend la liste de tous les base units de ce unit type. 
+		ObservableList<BaseUnitConverter> newBaseConverters =  
 				FXCollections.observableArrayList(unitTypeMenu.getValue().getBaseUnitConvertersList());
 		
-		leftTextField.setText("");
-		rightTextField.setText("");
+		leftTextField.setText(""); // On va set le textfield au gauche a rien
+		rightTextField.setText(""); // On va set le textfield au droite a rien
 
 		
 		leftUnitMenu.setItems(newBaseConverters); // We want to add all the units for the specific unit type, so the whole list of them on the left ComboBox so the user can change them to the conversion he wants.
@@ -135,10 +141,10 @@ public class SampleController implements Initializable  // Nous voulons initiali
 	public void onLeftTextFieldChange(KeyEvent e) // Method for when we change the left textfield. Un événement qui indique qu'une frappe s'est produite dans un composant. Cet événement de bas niveau est généré par un objet composant (dans notre cas un champ de texte) lorsqu'une touche est enfoncée, relâchée ou tapée.
 	{
 
-		if(e.getCharacter().matches("[^\\e\t\r\\d+$]"))
+		if(e.getCharacter().matches("[^\\e\t\r\\d+$]")) // si le char que nous prenons quand on press un key est un char qui n'ést pas un nombre entre 0 a 9
 		{
-			e.consume();
-			leftTextField.setStyle("-fx-border-color: red");
+			e.consume(); // on va "consumer" le char ou bien l'effacer
+			leftTextField.setStyle("-fx-border-color: red"); // Si on a taper un char qui n'est pas un numéro, on change le contour du textfield a rouge, pour indiquer a l'usager. 
 		}
 		
 		convertLeftToRight(); // So when we change the left textfield, naturally we will apply the method for converting from the left textfield to the right textfield. 

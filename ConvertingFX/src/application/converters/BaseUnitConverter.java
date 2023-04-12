@@ -1,4 +1,8 @@
-// Ceci est une classe abstraite
+/*
+ * Auteur: Bilal Z. 
+ * Description: Ceci est une classe abstraite. Cette code nous indique comment nous allons
+                pouvoir convertir d'un unité vers l'unité de "base" pour pouboir convertir a un autre unité. 
+ */
 
 package application.converters;
 

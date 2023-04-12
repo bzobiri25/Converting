@@ -4,18 +4,18 @@ import java.math.BigDecimal;
 
 import application.converters.BaseUnitConverter;
 
-public class GallonConverter extends BaseUnitConverter 
+public class USQuartConverter extends BaseUnitConverter 
 {
-	public GallonConverter()
+	public USQuartConverter()
 	{
-		this.MULTIPLIER = new BigDecimal(3.785);
+		this.MULTIPLIER = new BigDecimal(0.946353);
 	}
 	
 	
 	@Override
 	public String getName() 
 	{
-		return "US Gallon";
+		return "US Quart";
 	}
 	
 }

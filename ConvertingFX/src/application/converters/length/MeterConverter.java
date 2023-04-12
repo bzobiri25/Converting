@@ -1,3 +1,8 @@
+/*
+ * Auteur: Bilal Z. 
+ * Description: C'et la classe qui va extend le BaseUnitConverter et indique l'unité de base pour la conversion. 
+ * */
+
 package application.converters.length;
 
 import java.math.BigDecimal;

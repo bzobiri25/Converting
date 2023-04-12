@@ -1,3 +1,10 @@
+/*
+ * Auteur: Bilal Z. 
+ * Description: Cela est une classe abstraite. Cette classe montre comment on aura une liste 
+                d'unités pour chaque type d'unité et montre davanatage les parametres de conversion,
+                comme si les deux unités sont les memes of fait rien par exemple. 
+ */
+
 package application.converters;
 
 import java.math.BigDecimal;
@@ -45,8 +52,8 @@ public abstract class UnitTypeConverter
 			}
 			else // If what we are converting is the not the base 
 			{
-				BigDecimal fromBase = baseUnitConverters.get(to.getName()).convertFromBase(base); // We need to convert from the base. This means we have this base value and we have to convert this base value to the needed unit. For example we had feet, we converted to meter so now we can convert to centimeter and the conversion is basically foot to centimeter. 
-				return fromBase.setScale(10, RoundingMode.HALF_UP); //  Return the value rounded to the nearest 10th decimal. 
+				BigDecimal fromBase = baseUnitConverters.get(to.getName()).convertFromBase(base); //Nous devons convertir à partir de la base. Cela signifie que nous avons cette valeur de base et que nous devons convertir cette valeur de base dans l'unité nécessaire. Par exemple, nous avions des pieds, nous avons converti en mètre, nous pouvons donc maintenant convertir en centimètre et la conversion est essentiellement pied en centimètre. 
+				return fromBase.setScale(10, RoundingMode.HALF_UP); //  Renvoie la valeur arrondie à la 10ème décimale la plus proche.
 			}
 		}
 	}
